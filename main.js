@@ -1,3 +1,4 @@
+
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 import { STLLoader } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/STLLoader.js';
@@ -19,7 +20,7 @@ const light = new THREE.AmbientLight(0xffffff, 1.5);
 scene.add(light);
 
 const loader = new STLLoader();
-loader.load('2-Picasso_Puzzle_Base', (geometry) => {
+loader.load('model.stl', (geometry) => {
   const material = new THREE.MeshStandardMaterial({ color: 0x0077be });
   const mesh = new THREE.Mesh(geometry, material);
   mesh.rotation.x = -0.5 * Math.PI;
